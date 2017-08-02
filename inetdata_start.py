@@ -20,7 +20,7 @@
 
 # Working with JSON data = javascript object notation
 
-# example code for parsing and processiong JSON
+# example code for parsing and processing JSON
 
 import urllib2
 import json
@@ -33,6 +33,9 @@ def printResults(data):
 
         count = theJSON["metadata"]["count"];
         print str(count) + " events recorded"
+
+        for i in theJSON["features"]:
+            print i["properties"]["place"]
 
 def main():
     # define a variable to hold and source URL
